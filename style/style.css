@@ -1,3 +1,50 @@
 .header{
 	color: yellow;
 }
+.container{
+	display: flex;
+	/*flex-direction: column;*/
+}
+.items{
+	width: 50px;
+	height: 50px;
+	margin: 5px;
+	background-color: yellow;
+	border: 1px solid green;
+}
+
+section{
+	display: flex;
+	
+	align-items: center;
+  justify-content: space-around;
+}
+
+ html {
+        font-family: sans-serif;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      header {
+        background: purple;
+        height: 100px;
+      }
+
+      h1 {
+        text-align: center;
+        color: white;
+        line-height: 100px;
+        margin: 0;
+      }
+
+      article {
+      	flex: 200px;
+        padding: 10px;
+        margin: 10px;
+        background: aqua;
+      }
+
+      /* Add your flexbox CSS below here */
