@@ -1,50 +1,38 @@
-.header{
-	color: yellow;
+.square-container {
+	display: inline-block;
+	background-color: #20B2AA;
+	border-radius: 6px;
+	border: 3px solid #ddd;
+	margin: 30px;
+	text-align: center;
 }
-.container{
+.square {
+	margin: 40px;
+}
+.square h1 {
+	text-align: center;
+	font-size: 18px;
+	margin: 0;
+	padding: 8px;
+	color: #1c313b;
+}
+.square p {
+	font-size: 16px;
+	margin-left: 5px;
+	color: #154c63;
+	font-weight: bold;
+}
+.row {
 	display: flex;
-	/*flex-direction: column;*/
 }
-.items{
-	width: 50px;
-	height: 50px;
-	margin: 5px;
-	background-color: yellow;
-	border: 1px solid green;
-}
-
-section{
-	display: flex;
-	
-	align-items: center;
-  justify-content: space-around;
+.row div {
+	width: 80px;
+	height: 80px;
+	background-color: #ddd;
+	border: 1px solid #fdfd;
+	margin: 1px;
+	border-radius: 4px;
+	box-shadow: 10px 5px 5px #ADD8E6;
 }
 
- html {
-        font-family: sans-serif;
-      }
 
-      body {
-        margin: 0;
-      }
-
-      header {
-        background: purple;
-        height: 100px;
-      }
-
-      h1 {
-        text-align: center;
-        color: white;
-        line-height: 100px;
-        margin: 0;
-      }
-
-      article {
-      	flex: 200px;
-        padding: 10px;
-        margin: 10px;
-        background: aqua;
-      }
-
-      /* Add your flexbox CSS below here */
