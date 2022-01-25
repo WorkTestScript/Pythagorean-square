@@ -32,13 +32,13 @@ function selectDate(){
 	let twoNumber = String(oneNumber).split('').reduce((accum, elem) => +accum + +elem);
 	let threeNumber = oneNumber - (selectDay.value.split('')[0] * 2);
 	let fourNumber = String(threeNumber).split('').reduce((accum, elem) => +accum + +elem);
-	let allNumber = stringDate + oneNumber + twoNumber + threeNumber + fourNumber;
+	let allNumbers = stringDate + oneNumber + twoNumber + threeNumber + fourNumber;
 		numberLife.textContent = `Number life ${twoNumber}`;
-		numberSort(allNumber);
+		numberSort(allNumbers);
 }
-function numberSort(allNumber){
+function numberSort(allNumbers){
 	const sort = ["","","","","","","","",""];
-	allNumber.split('').map(item => {
+	allNumbers.split('').map(item => {
 		switch(item){
 			case '1':
 			sort[0] += item;
@@ -69,24 +69,16 @@ function numberSort(allNumber){
 			break;
 		}
 	});
-	showNumber(sort);
+	showNumbersSquared(sort);
 }
-function showNumber(sort){
+function showNumbersSquared(sort){
 	const boxAll = document.querySelectorAll('.square div.col p');
 	for(let i = 0; i < 9; i++){
 		boxAll[i].textContent = sort[i];
 	}
-	numberRowEndCol(sort)
+	outNumbers(sort)
 }
-function numberRowEndCol(sort){
-	const row147 = (sort[0] + sort[1] + sort[2]).length;
-	const row258 = (sort[3] + sort[4] + sort[5]).length;
-	const row369 = (sort[6] + sort[7] + sort[8]).length;
-	const col_123 = (sort[0] + sort[3] + sort[6]).length;
-	const col_456 = (sort[1] + sort[4] + sort[7]).length;
-	const col_789 = (sort[2] + sort[5] + sort[8]).length;
-	const diag159 = (sort[0] + sort[4] + sort[8]).length;
-	const diag753 = (sort[2] + sort[4] + sort[6]).length;
+function outNumbers(sort){
 	const outNumbers = {
 		one: sort[0],
 		two: sort[3],
@@ -95,19 +87,22 @@ function numberRowEndCol(sort){
 		five: sort[4],
 		six: sort[7],
 		seven: sort[2],
+		eight: sort[5],
 		nine: sort[8],
-		row147: row147,
-		row258: row258,
-		row369: row369,
-		col_123: col_123,
-		col_456: col_456,
-		col_789: col_789,
-		diag159: diag159,
-		diag753: diag753,
+		row_147: (sort[0] + sort[1] + sort[2]).length,
+		row_258: (sort[3] + sort[4] + sort[5]).length,
+		row_369: (sort[6] + sort[7] + sort[8]).length,
+		col_123: (sort[0] + sort[3] + sort[6]).length,
+		col_456: (sort[1] + sort[4] + sort[7]).length,
+		col_789: (sort[2] + sort[5] + sort[8]).length,
+		diag_159: (sort[0] + sort[4] + sort[8]).length,
+		diag_753: (sort[2] + sort[4] + sort[6]).length
 	}
-	console.log(outNumbers);
+	showDiscription(outNumbers);
 }
+
 btnSelect.addEventListener('click', selectDate);
+
 
 
 
