@@ -25,7 +25,7 @@ function show(outNum, dataObj, elem){
 			elem.textContent = ` ${dataObj.six}`;
 			break; 
 		default:
-			elem.textContent = "Больше шести единиц"; 
+			elem.textContent = "Больше шести цифер"; 
 		}
 	}
 function showDiscription(outNumbers) {
