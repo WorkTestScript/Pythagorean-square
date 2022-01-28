@@ -4,7 +4,7 @@ function show(outNum, dataObj, elem){
 	else num = outNum;
 		switch(num){
 		case 0:
-			elem.textContent = "Цифер нет";
+			elem.textContent = ` ${dataObj.no}`;
 			break;
 		case 1:
 			elem.textContent = ` ${dataObj.one}`;
@@ -21,20 +21,17 @@ function show(outNum, dataObj, elem){
 		case 5:
 			elem.textContent = ` ${dataObj.five}`;
 			break; 
-		case 6:
-			elem.textContent = ` ${dataObj.six}`;
-			break; 
 		default:
-			elem.textContent = "Больше шести цифер"; 
+			elem.textContent = ` ${dataObj.six}`; 
 		}
 	}
-function showDiscription(outNumbers) {
-	const descriptParags = document.querySelectorAll('.description p');
+function showDiscription(outNum) {
+	const descriptParags = document.querySelectorAll('.description-block span');
 	const {
-			one, two, three, four, five, six, seven, eight, nine,
+			no, one, two, three, four, five, six, seven, eight, nine,
 			row_147, row_258, row_369, col_123, col_456, col_789,
 			diag_159, diag_753
-			} = outNumbers; 
+			} = outNum; 
 	const {
 			oneNum, twoNum, threeNum,
 	 		fourNum, fiveNum, sixNum,
@@ -61,7 +58,7 @@ function showDiscription(outNumbers) {
 	show(col_789, col789, descriptParags[14]);
 	show(diag_159, diag159, descriptParags[15]);
 	show(diag_753, diag753, descriptParags[16]);
-	if(diag_159 > diag_753) descriptParags[17].textContent = max159;
+	if(diag_159 > diag_753) descriptParags[17].textContent = " Духовность";
 	else if(diag_159 == diag_753) descriptParags[17].textContent = equals;
-	else descriptParags[17].textContent = max753;
+	else descriptParags[17].textContent = " Материальая ценность";
 }

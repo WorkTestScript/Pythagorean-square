@@ -33,10 +33,32 @@ function selectDate(){
 	let threeNumber = oneNumber - (selectDay.value.split('')[0] * 2);
 	let fourNumber = String(threeNumber).split('').reduce((accum, elem) => +accum + +elem);
 	let allNumbers = stringDate + oneNumber + twoNumber + threeNumber + fourNumber;
-		numberLife.textContent = `Number life ${twoNumber}`;
-		numberSort(allNumbers);
+		sortNumbersSquared(allNumbers);
 }
-function numberSort(allNumbers){
+function outNumbers(sort){
+	const outNum = {
+		one: sort[0],
+		two: sort[3],
+		three: sort[6],
+		four: sort[1],
+		five: sort[4],
+		six: sort[7],
+		seven: sort[2],
+		eight: sort[5],
+		nine: sort[8],
+		row_147: (sort[0] + sort[1] + sort[2]).length,
+		row_258: (sort[3] + sort[4] + sort[5]).length,
+		row_369: (sort[6] + sort[7] + sort[8]).length,
+		col_123: (sort[0] + sort[3] + sort[6]).length,
+		col_456: (sort[1] + sort[4] + sort[7]).length,
+		col_789: (sort[2] + sort[5] + sort[8]).length,
+		diag_159: (sort[0] + sort[4] + sort[8]).length,
+		diag_753: (sort[2] + sort[4] + sort[6]).length
+	}
+	showColAndRowNumbers(outNum);
+	showDiscription(outNum);
+}
+function sortNumbersSquared(allNumbers){
 	const sort = ["","","","","","","","",""];
 	allNumbers.split('').map(item => {
 		switch(item){
@@ -70,35 +92,28 @@ function numberSort(allNumbers){
 		}
 	});
 	showNumbersSquared(sort);
+	outNumbers(sort);
 }
 function showNumbersSquared(sort){
-	const boxAll = document.querySelectorAll('.square div.col p');
+	const boxAll = document.querySelectorAll('.square .col p');
 	for(let i = 0; i < 9; i++){
 		boxAll[i].textContent = sort[i];
 	}
-	outNumbers(sort)
 }
-function outNumbers(sort){
-	const outNumbers = {
-		one: sort[0],
-		two: sort[3],
-		three: sort[6],
-		four: sort[1],
-		five: sort[4],
-		six: sort[7],
-		seven: sort[2],
-		eight: sort[5],
-		nine: sort[8],
-		row_147: (sort[0] + sort[1] + sort[2]).length,
-		row_258: (sort[3] + sort[4] + sort[5]).length,
-		row_369: (sort[6] + sort[7] + sort[8]).length,
-		col_123: (sort[0] + sort[3] + sort[6]).length,
-		col_456: (sort[1] + sort[4] + sort[7]).length,
-		col_789: (sort[2] + sort[5] + sort[8]).length,
-		diag_159: (sort[0] + sort[4] + sort[8]).length,
-		diag_753: (sort[2] + sort[4] + sort[6]).length
-	}
-	showDiscription(outNumbers);
+function showColAndRowNumbers(outNum){
+	const elems = document.querySelectorAll('.col-row-list span');
+ 	const {
+			 row_147, row_258, row_369, col_123, col_456, col_789,
+			 diag_159, diag_753
+		   } = outNum; 
+		elems[0].textContent = row_147;
+		elems[1].textContent = row_258;
+		elems[2].textContent = row_369;
+		elems[3].textContent = col_123;
+		elems[4].textContent = col_456;
+		elems[5].textContent = col_789;
+		elems[6].textContent = diag_159;
+		elems[7].textContent = diag_753;
 }
 
 btnSelect.addEventListener('click', selectDate);
