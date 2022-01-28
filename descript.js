@@ -58,7 +58,7 @@ function showDiscription(outNum) {
 	show(col_789, col789, descriptParags[14]);
 	show(diag_159, diag159, descriptParags[15]);
 	show(diag_753, diag753, descriptParags[16]);
-	if(diag_159 > diag_753) descriptParags[17].textContent = " Духовность";
+	if(diag_159 > diag_753) descriptParags[17].textContent = max159;
 	else if(diag_159 == diag_753) descriptParags[17].textContent = equals;
-	else descriptParags[17].textContent = " Материальая ценность";
+	else descriptParags[17].textContent = max753;
 }
