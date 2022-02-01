@@ -5,7 +5,8 @@ const showDate = document.querySelector('.show-date');
 const numberLife = document.querySelector('.number-life');
 const btnSelect = document.querySelector('.btn-select');
 const fullYear = (new Date()).getFullYear();
-{
+function createOptions() {
+	
 	let resultDay = '';
 	let resultMonth = '';
 	let resultYear = '';
@@ -15,7 +16,7 @@ const fullYear = (new Date()).getFullYear();
 	for(let i = 1; i <= 12; i++){
 		resultMonth += `<option value="${i}">${i}</option>`;
 	}
-	for(let i = 1900; i <= fullYear; i++){
+	for(let i = 1900; i <= 1999; i++){
 		resultYear += `<option value="${i}">${i}</option>`;
 	}
 	selectDay.innerHTML = resultDay;
@@ -101,7 +102,7 @@ function showNumbersSquared(sort){
 	}
 }
 function showColAndRowNumbers(outNum){
-	const elems = document.querySelectorAll('.col-row-list span');
+	const elems = document.querySelectorAll('.colrow-list span');
  	const {
 			 row_147, row_258, row_369, col_123, col_456, col_789,
 			 diag_159, diag_753

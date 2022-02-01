@@ -7,46 +7,91 @@
 	justify-content: space-around;
 	flex-wrap: wrap;
 	padding: 30px 0;
-	background-color: #20B2AA;
+	/* background-color: #9dcad2; */
 	border-radius: 6px;
 	border: 3px solid #ddd;
 	margin: 30px;
 }
-.select-block, .select-date {
+.head-select {
 	display: flex;
 	justify-content: center;
-	padding: 20px;
+	margin-left: 67px;
 }
-.select-date {
+.head-select span {
+	width: 60px;
+	height: 16px;
+	padding: 5px;
+	margin: 20px 4px 4px 4px;
+	text-align: center;
+	border: 1px solid #1c313b;
+	border-radius: 10px;
+	font-size: 16px;
+	line-height: 15px;
+	box-shadow: 5px 5px 5px #ADD8E6;
+	background-color: rgb(250, 246, 246);
+
+}
+.select-date-1999 h6, .select-date-2000 h6 {
+	width: 125px;
+	height: 15px;
+	border: 1px solid #444;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px #ADD8E6;
+	font-size: 16px;
+	text-align: center;
+    color: #444;
+    padding: 5px;
+    margin: 4px;
+    line-height: 15px;
+    background-color: rgb(250, 246, 246);
+}
+.select-date-1999, .select-date-2000 {
+	display: flex;
+	justify-content: center;
+	justify-items: center;
 	margin: 0 20px;
     position: relative;
 }
-.select-date select {
-    display: block;
-    width: 100%; /* от ширины блока div */
-    padding: .75rem 2.5rem .75rem 1rem;/* отступы от текста до рамки */
-    margin: 0 5px;
-    background: none; /* убираем фон */
-    border: 1px solid #ccc; /* рамка */
-    border-radius: 4px;/* скругление полей формы */
-    -webkit-appearance: none;/* Chrome */
-    -moz-appearance: none;/* Firefox */
-    appearance: none;/* убираем дефолнтные стрелочки */
-    font-family: inherit;/* наследует от родителя */
-    font-size: 18px;
-    text-align: center;
-    color: #444;
-    cursor: pointer;
+.select-date-1999 select, .select-date-2000 select {
+	width: 70px;
+	height: 26px;
+	padding: 5px;
+	margin: 4px;
+	border-radius: 10px;
+	font-size: 14px;
+	-webkit-appearance: none;
+	background-image: url('arrow.png');
+	background-size: 20px 20px;
+	background-color: rgb(250, 246, 246);
+	background-position: right center;
+	background-repeat: no-repeat;
+	line-height: 1em;
+	cursor: pointer;
+	box-shadow: 5px 5px 5px #ADD8E6;
+	/* for FF */
+	-moz-appearance: none;
+	/*text-indent: 0.01px; */
+	text-overflow: '';
+	/* for IE */
+	-ms-appearance: none;
+	appearance: none !important;
 }
-.select-date select:hover {
-	border-color: #20B2AA;
-}
-.btn-select {
-	font-size: 18px;
-    text-align: center;
-    color: #444;
+/* select::-ms-expand {
+	display: none;
+} */
+.btn-select-1999, .btn-select-2000 {
+	width: 70px;
+	height: 26px;
+	padding: 5px;
+	margin: 4px;
+	font-size: 14px;
+	line-height: 10px;
+	border-radius: 10px;
+    color: #0a6590;
     cursor: pointer;
-    padding: 5px;
+	border: 1px solid #444;
+	box-shadow: 5px 5px 5px #ADD8E6;
+  
 }
 .square {
 	text-align: center;
@@ -56,12 +101,12 @@
 	font-size: 20px;
 	margin: 0;
 	padding: 16px;
-	color: #1c313b;
+	color: #0a6590;
 }
 .square p {
 	font-size: 20px;
 	margin-left: 5px;
-	color: #154c63;
+	color: #0a6590;
 	font-weight: bold;
 }
 .row {
@@ -70,31 +115,40 @@
 .row div {
 	width: 150px;
 	height: 150px;
-	background-color: #ddd;
+	background-color: rgb(239, 232, 232);
 	border: 1px solid #fdfd;
 	margin: 2px;
 	border-radius: 4px;
 	box-shadow: 10px 5px 5px #ADD8E6;
 }
-.col-row-list {
+.colrow-list {
 	padding-right: 15px;
 	margin-top: 5px;
-	background-color: #ddd;
+	background-color: rgb(239, 232, 232);
 	border: 1px solid #fdfd;
 	border-radius: 4px;
 	box-shadow: 10px 5px 5px #ADD8E6;
 }
-.col-row-list li {
+.colrow-list li {
+	margin-bottom: 5px;
 	font-size: 20px;
 	line-height: 1.5;
 	list-style-type: none;
-	color: #1c313b;
+	color: #0a6590;
 }
-.col-row-list ul {
+.colrow-list ul {
+	margin-top: 10px;
 	padding-left: 20px;
 }
-.col-row-list span {
-font-weight:bold;
+.colrow-list span {
+	font-weight:bold;
+}
+.show-date {
+	margin: 30px 90px;
+}
+.description-block {
+	width: 94%;
+	margin:10px 0 20px 40px;
 }
 .description-list {
 	line-height: 1.5;
@@ -118,10 +172,7 @@ font-weight:bold;
 .description-list li:nth-child(even){
 	background-color: #ddd;
 }
-.description-block {
-	width: 95%;
-	margin: 25px;
-}
+
 
 
 
