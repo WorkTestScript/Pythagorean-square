@@ -3,17 +3,23 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/content.css">
 	<link rel="stylesheet" type="text/css" href="style/page.css">
 	<title>Testing</title>
 </head>
 <body>
 	<div id="wrap">
 		<div class="content">
-		<div id="header">
-			<button class="btn-1999">До 1999</button>
-			<button class="btn-2000">После 2000</button>
-		</div>   
+		<header>
+			<a href="#"><img class="logo" src="style/logo.png"></a>
+		<nav>
+			<a href="#">Главная</a>
+			<span class="btn-1999">До 1999</span>
+			<span class="btn-2000">После 2000</span>
+			<a href="https://ru.wikipedia.org/wiki/%D0%9D%D1%83%D0%BC%D0%B5%D1%80%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F">Нумерология</a>
+		</nav>
+		</header>  
+		<section class="hidden"> 
 <div class="head-select">
 	<span>День</span>
 	<span>Месяц</span>
@@ -24,8 +30,10 @@
 	<select class="select-day"></select>
 	<select class="select-month"></select>
 	<select class="select-year"></select>
-	<button class="btn-select">Дальше</button>
+	<button class="btn-calc">Дальше</button>
 </div>
+		</section>
+		  <main class="hidden">
 <div class="square-container">
 <div class="square">
 	<div class="row">
@@ -70,7 +78,6 @@
 		<p></p>
 	</div>
 	</div>
-
 </div>
 <div class="colrow-list">
 <ul>
@@ -84,7 +91,6 @@
 <li><span class="col-row">0</span>&nbsp;циф.&nbsp;(диагональ 753)&nbsp;Темперамент</li>
 </ul>
 		<h1 class="show-date"></h1>
-</div>
 </div>
 </div>
 	<div class="description-block">
@@ -109,13 +115,15 @@
 		<li>Преобладает:<span class="diag-max159"></span></li>
 	</ul>
 	</div>
-</div>
-	<div id="footer">
 	</div>
+						</main>
+	<footer>
+		<button class="scroll">На верх</button>
+	</footer>
 </div>
-<script type="text/javascript" src="data.js" defer></script>
-<script type="text/javascript" src="script.js" defer></script>
-<script type="text/javascript" src="descript.js" defer></script>
-
+<script type="text/javascript" src="script/data.js" defer></script>
+<script type="text/javascript" src="script/selectDate.js" defer></script>
+<script type="text/javascript" src="script/script.js" defer></script>
+<script type="text/javascript" src="script/descript.js" defer></script>
 </body>
 </html>

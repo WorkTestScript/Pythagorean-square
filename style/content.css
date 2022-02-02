@@ -1,13 +1,9 @@
-* {
-	margin: 0;
-	padding: 0;
-}
+
 .square-container {
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
 	padding: 30px 0;
-	/* background-color: #9dcad2; */
 	border-radius: 6px;
 	border: 3px solid #ddd;
 	margin: 30px;
@@ -15,33 +11,33 @@
 .head-select {
 	display: flex;
 	justify-content: center;
-	margin-left: 67px;
+	margin-top: 20px;
+	margin-left: 65px;
 }
 .head-select span {
-	width: 60px;
+	width: 58px;
 	height: 16px;
 	padding: 5px;
 	margin-bottom: 4px;
 	margin-top: 4px;
 	text-align: center;
-	border: 1px solid #1c313b;
+	border: 1px solid #ddd;
 	border-radius: 2px;
 	font-size: 16px;
 	line-height: 15px;
-	box-shadow: 5px 5px 5px #ADD8E6;
+	box-shadow: 2px 3px 0px #ADD8E6;
 	background-color: rgb(250, 246, 246);
 }
 .select-date h6 {
 	width: 125px;
 	height: 14px;
-	border: 1px solid #444;
+	border: 1px solid #ddd;
 	border-radius: 2px;
-	box-shadow: 5px 5px 5px #ADD8E6;
+	box-shadow: 2px 3px 0px #ADD8E6;
 	font-size: 16px;
 	text-align: center;
-    color: #444;
     padding: 5px;
-    /*margin: 4px;*/
+    margin-right: 10px;
     line-height: 15px;
     background-color: rgb(250, 246, 246);
 }
@@ -56,41 +52,38 @@
 	width: 70px;
 	height: 26px;
 	padding: 5px;
-	/*margin: 4px;*/
 	border-radius: 2px;
 	font-size: 14px;
 	-webkit-appearance: none;
 	background-image: url('arrow.png');
 	background-size: 20px 20px;
 	background-color: rgb(250, 246, 246);
+	border: 1px solid #ddd;
 	background-position: right center;
 	background-repeat: no-repeat;
 	line-height: 1em;
 	cursor: pointer;
-	box-shadow: 5px 5px 5px #ADD8E6;
-	/* for FF */
+	box-shadow: 2px 3px 0px #ADD8E6;
 	-moz-appearance: none;
-	/*text-indent: 0.01px; */
 	text-overflow: '';
-	/* for IE */
 	-ms-appearance: none;
 	appearance: none !important;
 }
-/* select::-ms-expand {
-	display: none;
-} */
-.btn-select {
+.btn-calc {
 	width: 70px;
 	height: 26px;
 	padding: 5px;
-	/*margin: 2px;*/
+	margin-left: 10px;
 	font-size: 14px;
+	font-weight: bold;
 	line-height: 10px;
 	border-radius: 2px;
-    color: #0a6590;
     cursor: pointer;
-	border: 1px solid #444;
-	box-shadow: 5px 5px 5px #ADD8E6;
+	border: 1px solid #ddd;
+	box-shadow: 2px 3px 0px #ADD8E6;
+}
+.btn-calc:active {
+	color: #ADD8E6;
 }
 .square {
 	text-align: center;
@@ -171,6 +164,11 @@
 .description-list li:nth-child(even){
 	background-color: #ddd;
 }
+.hidden {
+    display: none;
+}
+
+
 
 
 

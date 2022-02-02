@@ -1,6 +1,7 @@
 * {
 	padding: 0;
     margin: 0;
+	color: rgb(85, 83, 83);
   }
 #wrap {
  	width: 100%;
@@ -8,15 +9,70 @@
 	background-color: white;
 	min-height: 100%;
 }
-#header{
+            /* --Header-- */
+header{
+	display: flex;
+	justify-content: space-between;
     height: 100px;
-    background-color: #ADD8E6;
+    background-color: #93cbde;
+	padding-right: 70px;
   }
+.logo {
+	height: 100px;
+	width: 100px;
+	margin-left: 20px;
+}
+nav {
+	display: flex;
+	justify-content: space-around;
+	margin: 40px;
+}
+nav span {
+	font-size: 25px;
+	cursor: pointer;
+	margin-right: 35px;
+	padding-bottom: 35px;
+	border-radius: 4px;
+	color: white;
+}
+nav span:hover {
+	color: rgb(111, 111, 118);
+	box-shadow: 0px 1px 0px rgb(111, 111, 118);
+}
+nav a {
+	text-decoration: none;
+	font-size: 27px;
+	margin-right: 40px;
+	padding-bottom: 35px;
+	color: white;
+	border-radius: 4px;
+}
+nav a:hover {
+	color: rgb(111, 111, 118);
+	box-shadow: 0px 1px 0px 0px;
+}
+		/* --Content-- */
 .content {
     min-height: calc(100vh - 80px);
 }
-#footer {
+		/* --Footer-- */
+footer {
+	display: flex;
+	justify-content: center;
 	height: 80px;
 	background-color: #ADD8E6;
 	width: 100%;
+}
+.scroll {
+    border: none;
+    outline: none;
+    background-color: rgb(113, 113, 226);
+    color: white; 
+    cursor: pointer; 
+    padding: 5px; 
+    border-radius: 4px; 
+    font-size: 18px;
+}
+.scroll:hover {
+    background-color: red; /* Add a dark-grey background on hover */
 }

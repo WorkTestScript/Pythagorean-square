@@ -28,7 +28,7 @@ function show(outNum, dataObj, elem){
 function showDiscription(outNum) {
 	const descriptParags = document.querySelectorAll('.description-block span');
 	const {
-			no, one, two, three, four, five, six, seven, eight, nine,
+			one, two, three, four, five, six, seven, eight, nine,
 			row_147, row_258, row_369, col_123, col_456, col_789,
 			diag_159, diag_753
 			} = outNum; 
