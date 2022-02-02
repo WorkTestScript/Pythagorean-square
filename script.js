@@ -4,9 +4,11 @@ const selectYear = document.querySelector('.select-year');
 const showDate = document.querySelector('.show-date');
 const numberLife = document.querySelector('.number-life');
 const btnSelect = document.querySelector('.btn-select');
+const btn1999 = document.querySelector('.btn-1999');
+const btn2000 = document.querySelector('.btn-2000');
+const selectLabel = document.querySelector('.select-date h6')
 const fullYear = (new Date()).getFullYear();
-function createOptions() {
-	
+function createOptions(firstYear, lastYear) {
 	let resultDay = '';
 	let resultMonth = '';
 	let resultYear = '';
@@ -16,13 +18,21 @@ function createOptions() {
 	for(let i = 1; i <= 12; i++){
 		resultMonth += `<option value="${i}">${i}</option>`;
 	}
-	for(let i = 1900; i <= 1999; i++){
+	for(let i = firstYear; i <= lastYear; i++){
 		resultYear += `<option value="${i}">${i}</option>`;
 	}
 	selectDay.innerHTML = resultDay;
 	selectMonth.innerHTML = resultMonth;
 	selectYear.innerHTML = resultYear;
 }
+btn1999.addEventListener('click', ()=> {
+	createOptions(1900, 1999);
+	selectLabel.textContent = "До 1999";
+}); 
+btn2000.addEventListener('click', ()=> {
+	createOptions(2000, fullYear);
+	selectLabel.textContent = "После 2000";
+});
 function selectDate(){
 	showDate.textContent = (
 		`${selectDay.value < 10 ? "0" + selectDay.value : selectDay.value}.
@@ -31,33 +41,18 @@ function selectDate(){
 	let stringDate = selectDay.value + selectMonth.value + selectYear.value;
 	let oneNumber = stringDate.split('').reduce((accum, elem) => +accum + +elem);
 	let twoNumber = String(oneNumber).split('').reduce((accum, elem) => +accum + +elem);
-	let threeNumber = oneNumber - (selectDay.value.split('')[0] * 2);
+	let threeNumber;
+	let allNumbers;
 	let fourNumber = String(threeNumber).split('').reduce((accum, elem) => +accum + +elem);
-	let allNumbers = stringDate + oneNumber + twoNumber + threeNumber + fourNumber;
-		sortNumbersSquared(allNumbers);
-}
-function outNumbers(sort){
-	const outNum = {
-		one: sort[0],
-		two: sort[3],
-		three: sort[6],
-		four: sort[1],
-		five: sort[4],
-		six: sort[7],
-		seven: sort[2],
-		eight: sort[5],
-		nine: sort[8],
-		row_147: (sort[0] + sort[1] + sort[2]).length,
-		row_258: (sort[3] + sort[4] + sort[5]).length,
-		row_369: (sort[6] + sort[7] + sort[8]).length,
-		col_123: (sort[0] + sort[3] + sort[6]).length,
-		col_456: (sort[1] + sort[4] + sort[7]).length,
-		col_789: (sort[2] + sort[5] + sort[8]).length,
-		diag_159: (sort[0] + sort[4] + sort[8]).length,
-		diag_753: (sort[2] + sort[4] + sort[6]).length
+  if(selectLabel.textContent === "До 1999") {
+		threeNumber = oneNumber - (selectDay.value.split('')[0] * 2);
+		allNumbers = stringDate + oneNumber + twoNumber + threeNumber + fourNumber;
 	}
-	showColAndRowNumbers(outNum);
-	showDiscription(outNum);
+  if(selectLabel.textContent === "После 2000") {
+  		threeNumber = oneNumber + 19;
+  		allNumbers = stringDate + oneNumber + twoNumber + threeNumber + fourNumber + 19;
+	} 
+		sortNumbersSquared(allNumbers);
 }
 function sortNumbersSquared(allNumbers){
 	const sort = ["","","","","","","","",""];
@@ -95,6 +90,30 @@ function sortNumbersSquared(allNumbers){
 	showNumbersSquared(sort);
 	outNumbers(sort);
 }
+function outNumbers(sort){
+	const outNum = {
+		one: sort[0],
+		two: sort[3],
+		three: sort[6],
+		four: sort[1],
+		five: sort[4],
+		six: sort[7],
+		seven: sort[2],
+		eight: sort[5],
+		nine: sort[8],
+		row_147: (sort[0] + sort[1] + sort[2]).length,
+		row_258: (sort[3] + sort[4] + sort[5]).length,
+		row_369: (sort[6] + sort[7] + sort[8]).length,
+		col_123: (sort[0] + sort[3] + sort[6]).length,
+		col_456: (sort[1] + sort[4] + sort[7]).length,
+		col_789: (sort[2] + sort[5] + sort[8]).length,
+		diag_159: (sort[0] + sort[4] + sort[8]).length,
+		diag_753: (sort[2] + sort[4] + sort[6]).length
+	}
+	showColAndRowNumbers(outNum);
+	showDiscription(outNum);
+}
+
 function showNumbersSquared(sort){
 	const boxAll = document.querySelectorAll('.square .col p');
 	for(let i = 0; i < 9; i++){

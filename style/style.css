@@ -21,43 +21,43 @@
 	width: 60px;
 	height: 16px;
 	padding: 5px;
-	margin: 20px 4px 4px 4px;
+	margin-bottom: 4px;
+	margin-top: 4px;
 	text-align: center;
 	border: 1px solid #1c313b;
-	border-radius: 10px;
+	border-radius: 2px;
 	font-size: 16px;
 	line-height: 15px;
 	box-shadow: 5px 5px 5px #ADD8E6;
 	background-color: rgb(250, 246, 246);
-
 }
-.select-date-1999 h6, .select-date-2000 h6 {
+.select-date h6 {
 	width: 125px;
-	height: 15px;
+	height: 14px;
 	border: 1px solid #444;
-	border-radius: 10px;
+	border-radius: 2px;
 	box-shadow: 5px 5px 5px #ADD8E6;
 	font-size: 16px;
 	text-align: center;
     color: #444;
     padding: 5px;
-    margin: 4px;
+    /*margin: 4px;*/
     line-height: 15px;
     background-color: rgb(250, 246, 246);
 }
-.select-date-1999, .select-date-2000 {
+.select-date {
 	display: flex;
 	justify-content: center;
 	justify-items: center;
 	margin: 0 20px;
     position: relative;
 }
-.select-date-1999 select, .select-date-2000 select {
+.select-date select {
 	width: 70px;
 	height: 26px;
 	padding: 5px;
-	margin: 4px;
-	border-radius: 10px;
+	/*margin: 4px;*/
+	border-radius: 2px;
 	font-size: 14px;
 	-webkit-appearance: none;
 	background-image: url('arrow.png');
@@ -79,19 +79,18 @@
 /* select::-ms-expand {
 	display: none;
 } */
-.btn-select-1999, .btn-select-2000 {
+.btn-select {
 	width: 70px;
 	height: 26px;
 	padding: 5px;
-	margin: 4px;
+	/*margin: 2px;*/
 	font-size: 14px;
 	line-height: 10px;
-	border-radius: 10px;
+	border-radius: 2px;
     color: #0a6590;
     cursor: pointer;
 	border: 1px solid #444;
 	box-shadow: 5px 5px 5px #ADD8E6;
-  
 }
 .square {
 	text-align: center;
