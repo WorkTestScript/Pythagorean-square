@@ -7,6 +7,7 @@ const btn1999 = document.querySelector('.btn-1999');
 const btn2000 = document.querySelector('.btn-2000');
 const selectLabel = document.querySelector('.select-date h6')
 const section = document.querySelector('section');
+const start = document.querySelector('.start');
 const fullYear = (new Date()).getFullYear();
 
 function createOptions(firstYear, lastYear) {
@@ -30,11 +31,13 @@ function createOptions(firstYear, lastYear) {
 	    createOptions(1900, 1999);
 	    selectLabel.textContent = "До 1999";
 		section.classList.remove('hidden');
+		start.classList.add('hidden');
     }); 
     btn2000.addEventListener('click', ()=> {
 	    createOptions(2000, fullYear);
 	    selectLabel.textContent = "После 2000";
 		section.classList.remove('hidden');
+		start.classList.add('hidden');
     });
 function selectDate(){
 	showDate.textContent = (

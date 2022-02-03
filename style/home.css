@@ -1,0 +1,21 @@
+
+.present {
+    display: flex;
+    justify-content: space-between;
+}
+.present img {
+    width: 400px;
+    margin: 20px;
+}
+.present-descript {
+    padding-right: 20px;
+    margin-top: 20px;
+}
+.present h3 {
+    margin: 10px;
+    color: #252775;
+}
+.present h1 {
+    text-align: center;
+    color: #252775;
+}

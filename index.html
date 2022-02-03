@@ -1,129 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="style/content.css">
-	<link rel="stylesheet" type="text/css" href="style/page.css">
-	<title>Testing</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style/page.css">
+    <link rel="stylesheet" type="text/css" href="style/home.css">
+    <title>Home</title>
 </head>
 <body>
-	<div id="wrap">
+    <div class="wrap">
 		<div class="content">
 		<header>
-			<a href="#"><img class="logo" src="style/logo.png"></a>
+			<a href="index.html"><img class="logo" src="style/logo.png"></a>
 		<nav>
-			<a href="#">Главная</a>
-			<span class="btn-1999">До 1999</span>
-			<span class="btn-2000">После 2000</span>
+			<a href="index.html">Главная</a>
+			<a href="content.html" class="btn-1999">Матрица</a>
 			<a href="https://ru.wikipedia.org/wiki/%D0%9D%D1%83%D0%BC%D0%B5%D1%80%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F">Нумерология</a>
 		</nav>
-		</header>  
-		<section class="hidden"> 
-<div class="head-select">
-	<span>День</span>
-	<span>Месяц</span>
-	<span>Год</span>
-</div>
-<div class="select-date">
-	<h6></h6>
-	<select class="select-day"></select>
-	<select class="select-month"></select>
-	<select class="select-year"></select>
-	<button class="btn-calc">Дальше</button>
-</div>
-		</section>
-		  <main class="hidden">
-<div class="square-container">
-<div class="square">
-	<div class="row">
-	<div class="col box-1">
-		<h1>Характер</h1>
-		<p></p>
-	</div>
-	<div class="col box-4">
-		<h1>Здоровье</h1>
-		<p></p>
-	</div>
-	<div class="col box-7">
-		<h1>Везение</h1>
-		<p></p>
-	</div>
-	</div>
-	<div class="row">
-	<div class="col box-2">
-		<h1>Биополе</h1>
-		<p></p>
-	</div>
-	<div class="col box-5">
-		<h1>Логика</h1>
-		<p></p>
-	</div>
-	<div class="col box-8">
-		<h1>Чувство долга</h1>
-		<p></p>
-	</div>
-	</div>
-	<div class="row">
-	<div class="col box-3">
-		<h1>Интерес к науке</h1>
-		<p></p>
-	</div>
-	<div class="col box-6">
-		<h1>Трудолюбие</h1>
-		<p></p>
-	</div>
-	<div class="col box-9">
-		<h1>Память</h1>
-		<p></p>
-	</div>
-	</div>
-</div>
-<div class="colrow-list">
-<ul>
-<li><span class="col-row">0</span>&nbsp;циф.&nbsp;(ряд 147)&nbsp;Целеустремленность</li>
-<li><span class="col-row">0</span>&nbsp;циф.&nbsp;(ряд 258)&nbsp;Семейность</li>
-<li><span class="col-row">0</span>&nbsp;циф.&nbsp;(ряд 369)&nbsp;Стабильность</li>
-<li><span class="col-row">0</span>&nbsp;циф.&nbsp;(столбец 123)&nbsp;Самооценка</li>
-<li><span class="col-row">0</span>&nbsp;циф.&nbsp;(столбец 456)&nbsp;Достаток</li>
-<li><span class="col-row">0</span>&nbsp;циф.&nbsp;(столбец 789)&nbsp;Талант</li>
-<li><span class="col-row">0</span>&nbsp;циф.&nbsp;(диагональ 159)&nbsp;Духовность</li>
-<li><span class="col-row">0</span>&nbsp;циф.&nbsp;(диагональ 753)&nbsp;Темперамент</li>
-</ul>
-		<h1 class="show-date"></h1>
-</div>
-</div>
-	<div class="description-block">
-	<ul class="description-list">
-		<li>Характер:<span class="square-numbers-one"></span></li>
-		<li>Биополе:<span class="square-numbers-two"></span></li>
-		<li>Интерес к науке:<span class="square-numbers-three"></span></li>
-		<li>Здоровье:<span class="square-numbers-four"></span></li>
-		<li>Логика:<span class="square-numbers-five"></span></li>
-		<li>Трудолюбие:<span class="square-numbers-six"></span></li>
-		<li>Везение:<span class="square-numbers-seven"></span></li>
-		<li>Чувство долга:<span class="square-numbers-eight"></span></li>
-		<li>Память:<span class="square-numbers-nine"></span></li>
-		<li>Целеустремленность:<span class="data-row-147"></span></li>
-		<li>Семейность:<span class="data-row-258"></span></li>
-		<li>Стабильность:<span class="data-row-369"></span></li>
-		<li>Самооценка:<span class="data-col-123"></span></li>
-		<li>Достаток:<span class="data-col-456"></span></li>
-		<li>Талант:<span class="data-col-789"></span></li>
-		<li>Духовность:<span class="data-diag-159"></span></li>
-		<li>Темперамент:<span class="data-diag-753"></span></li>
-		<li>Преобладает:<span class="diag-max159"></span></li>
-	</ul>
-	</div>
-	</div>
-						</main>
-	<footer>
-		<button class="scroll">На верх</button>
-	</footer>
-</div>
-<script type="text/javascript" src="script/data.js" defer></script>
-<script type="text/javascript" src="script/selectDate.js" defer></script>
-<script type="text/javascript" src="script/script.js" defer></script>
-<script type="text/javascript" src="script/descript.js" defer></script>
+		</header> 
+        <div class="present">
+            <img src="style/square.jpg">
+            <div class="present-descript">
+                <h1>Квадрат Пифагора</h1>
+                <h3>Так называемая «психоматрица», придуманная древнегреческим ученым Пифагором, относится к самым популярным расчетам в нумерологии. Она помогает определить: силу характера, энергетику, здоровье, интеллект и другие врожденные качества.</h3>
+            </div>
+        </div>
+        </div>
+        <footer>
+            <a href="https://github.com/GlobalScript/Pythagorean-square"><img class="footer-img"src="style/footer.png" alt="footer"></a>
+        </footer>  
+        </body> 
 </body>
 </html>

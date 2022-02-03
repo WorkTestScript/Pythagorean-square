@@ -8,6 +8,11 @@
 	border: 3px solid #ddd;
 	margin: 30px;
 }
+.start h1 {
+	text-align: center;
+	margin-top: 100px;
+	color: #3b3db3;
+}
 .head-select {
 	display: flex;
 	justify-content: center;
@@ -23,9 +28,10 @@
 	text-align: center;
 	border: 1px solid #ddd;
 	border-radius: 2px;
-	font-size: 16px;
+	font-size: 15px;
 	line-height: 15px;
 	box-shadow: 2px 3px 0px #ADD8E6;
+	color: #3b3db3;
 	background-color: rgb(250, 246, 246);
 }
 .select-date h6 {
@@ -39,6 +45,7 @@
     padding: 5px;
     margin-right: 10px;
     line-height: 15px;
+	color: #3b3db3;
     background-color: rgb(250, 246, 246);
 }
 .select-date {
@@ -68,6 +75,10 @@
 	text-overflow: '';
 	-ms-appearance: none;
 	appearance: none !important;
+	color: #3b3db3;
+}
+.select-date option {
+	color: #3b3db3;
 }
 .btn-calc {
 	width: 70px;
@@ -80,6 +91,7 @@
 	border-radius: 2px;
     cursor: pointer;
 	border: 1px solid #ddd;
+	color: #3b3db3;
 	box-shadow: 2px 3px 0px #ADD8E6;
 }
 .btn-calc:active {
@@ -98,7 +110,7 @@
 .square p {
 	font-size: 20px;
 	margin-left: 5px;
-	color: #0a6590;
+	color: #3b3db3;
 	font-weight: bold;
 }
 .row {
@@ -132,15 +144,17 @@
 	margin-top: 10px;
 	padding-left: 20px;
 }
-.colrow-list span {
+.col-row {
 	font-weight:bold;
+	color: #0e11af;
 }
 .show-date {
 	margin: 30px 90px;
+	color:#3b3db3;
 }
 .description-block {
 	width: 94%;
-	margin:10px 0 20px 40px;
+	margin:10px 0 20px 30px;
 }
 .description-list {
 	line-height: 1.5;
@@ -148,7 +162,7 @@
 }
 .description-list li {
 	font-size: 20px;
-	color: #1a1c1c;
+	color: #0e11af;
 	font-weight:bold;
 	margin-bottom: 5px;
 	border-radius: 4px;
