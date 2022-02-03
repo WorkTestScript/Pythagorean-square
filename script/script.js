@@ -1,6 +1,7 @@
 	const btnCalc = document.querySelector('.btn-calc');
 	const btnScroll = document.querySelector('.scroll');
 	const main = document.querySelector('main');
+	const prompt = document.querySelector('.prompt');
 
 function sortNumbersSquared(allNumbers){
 	const sort = ["","","","","","","","",""];

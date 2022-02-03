@@ -3,12 +3,6 @@
     margin: 0;
 	color: rgb(85, 83, 83);
   }
-.wrap {
- 	width: 100%;
-	margin: 0 auto;
-	background-color: white;
-	min-height: 100%;
-}
             /* --Header-- */
 header{
 	display: flex;
@@ -74,10 +68,11 @@ footer {
     font-size: 18px;
 }
 .scroll:hover {
-    background-color: red; /* Add a dark-grey background on hover */
+    background-color: red;
 }
 .footer-img {
 	margin-top: 5px;
 	width: 70px;
 	height: 70px;
 }
+

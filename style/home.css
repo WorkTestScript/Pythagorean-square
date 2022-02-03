@@ -4,8 +4,8 @@
     justify-content: space-between;
 }
 .present img {
-    width: 400px;
-    margin: 20px;
+    width: 500px;
+    margin: 40px 20px;
 }
 .present-descript {
     padding-right: 20px;
@@ -14,6 +14,7 @@
 .present h3 {
     margin: 10px;
     color: #252775;
+    text-align: justify;
 }
 .present h1 {
     text-align: center;

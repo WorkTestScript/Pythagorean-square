@@ -9,9 +9,10 @@
 	margin: 30px;
 }
 .start h1 {
+	font-size: 25px;
 	text-align: center;
-	margin-top: 100px;
-	color: #3b3db3;
+	margin-top: 200px;
+	color: #252775;
 }
 .head-select {
 	display: flex;
@@ -31,7 +32,7 @@
 	font-size: 15px;
 	line-height: 15px;
 	box-shadow: 2px 3px 0px #ADD8E6;
-	color: #3b3db3;
+	color: #252775;
 	background-color: rgb(250, 246, 246);
 }
 .select-date h6 {
@@ -45,7 +46,7 @@
     padding: 5px;
     margin-right: 10px;
     line-height: 15px;
-	color: #3b3db3;
+	color: #252775;
     background-color: rgb(250, 246, 246);
 }
 .select-date {
@@ -62,7 +63,7 @@
 	border-radius: 2px;
 	font-size: 14px;
 	-webkit-appearance: none;
-	background-image: url('arrow.png');
+	background-image: url('../images/arrow.png');
 	background-size: 20px 20px;
 	background-color: rgb(250, 246, 246);
 	border: 1px solid #ddd;
@@ -75,10 +76,10 @@
 	text-overflow: '';
 	-ms-appearance: none;
 	appearance: none !important;
-	color: #3b3db3;
+	color: #252775;
 }
 .select-date option {
-	color: #3b3db3;
+	color: #252775;
 }
 .btn-calc {
 	width: 70px;
@@ -91,11 +92,16 @@
 	border-radius: 2px;
     cursor: pointer;
 	border: 1px solid #ddd;
-	color: #3b3db3;
+	color: #252775;
 	box-shadow: 2px 3px 0px #ADD8E6;
 }
 .btn-calc:active {
 	color: #ADD8E6;
+}
+.prompt {
+	margin-top: 20px;
+	margin-left: 46%;
+	color: #252775;
 }
 .square {
 	text-align: center;
@@ -110,7 +116,7 @@
 .square p {
 	font-size: 20px;
 	margin-left: 5px;
-	color: #3b3db3;
+	color: #252775;
 	font-weight: bold;
 }
 .row {
@@ -146,11 +152,11 @@
 }
 .col-row {
 	font-weight:bold;
-	color: #0e11af;
+	color: #252775;
 }
 .show-date {
 	margin: 30px 90px;
-	color:#3b3db3;
+	color:#252775;
 }
 .description-block {
 	width: 94%;
@@ -162,7 +168,7 @@
 }
 .description-list li {
 	font-size: 20px;
-	color: #0e11af;
+	color: #252775;
 	font-weight:bold;
 	margin-bottom: 5px;
 	border-radius: 4px;

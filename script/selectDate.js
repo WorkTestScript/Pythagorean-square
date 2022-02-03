@@ -32,12 +32,14 @@ function createOptions(firstYear, lastYear) {
 	    selectLabel.textContent = "До 1999";
 		section.classList.remove('hidden');
 		start.classList.add('hidden');
+		prompt.classList.remove('hidden');
     }); 
     btn2000.addEventListener('click', ()=> {
 	    createOptions(2000, fullYear);
 	    selectLabel.textContent = "После 2000";
 		section.classList.remove('hidden');
 		start.classList.add('hidden');
+		prompt.classList.remove('hidden');
     });
 function selectDate(){
 	showDate.textContent = (
