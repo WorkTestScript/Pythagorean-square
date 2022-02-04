@@ -1,6 +1,6 @@
-Нумерология Квадрат Пифагора.
-Pet project.
-. JavaScript
-. HTML
-. CSS
+# Нумерология Квадрат Пифагора.
+# Pet project.
+# . JavaScript
+# . HTML
+# . CSS
 
