@@ -1,6 +1,6 @@
-# Нумерология Квадрат Пифагора.
-# Pet project.
-# . JavaScript
-# . HTML
-# . CSS
+# Numerology. Pythagorean Square.
+##  Multiple-page project.
+### . JavaScript
+### . HTML
+### . CSS
 

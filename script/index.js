@@ -2,7 +2,7 @@
 	const btnScroll = document.querySelector('.scroll');
 	const main = document.querySelector('main');
 	const prompt = document.querySelector('.prompt');
-
+	
 function sortNumbersSquared(allNumbers){
 	const sort = ["","","","","","","","",""];
 	allNumbers.split('').map(item => {
@@ -83,17 +83,13 @@ function showColAndRowNumbers(outNum){
 		elems[6].textContent = diag_159;
 		elems[7].textContent = diag_753;
 }
-btnCalc.addEventListener('click', () => {
-	selectDate();
-	main.classList.remove('hidden');
 
-});
-// scroll page up
 function scrollUp() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 } 
 	btnScroll.addEventListener('click', scrollUp);
+
 
 
 
